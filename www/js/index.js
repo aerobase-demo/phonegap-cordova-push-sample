@@ -53,9 +53,12 @@ app.initialize();
 
 function onDeviceReady() {
   var pushConfig = {
-    senderID: "440003753440",
-    variantID: "91a55c4d-cf8d-4e24-9da7-33bef6e677ad",
-    variantSecret: "17ce223b-601a-4f6b-a1c8-d1e9a5b449d8"
+    "pushServerURL": "https://example.aerobase.io/unifiedpush-server/",
+    "android": {
+      senderID: "440003753440",
+      variantID: "91a55c4d-cf8d-4e24-9da7-33bef6e677ad",
+      variantSecret: "17ce223b-601a-4f6b-a1c8-d1e9a5b449d8"
+    }
   };
 
   push.register(onNotification, successHandler, errorHandler, pushConfig);
